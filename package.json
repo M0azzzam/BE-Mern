@@ -1,0 +1,46 @@
+{
+  "name": "main-server",
+  "version": "1.0.0",
+  "description": "Main server for API gateway.",
+  "main": "src/index.js",
+  "repository": "git@bitbucket.org:repairdeskreplica/main-server.git",
+  "author": "Tauqeer Nasir",
+  "license": "N/A",
+  "private": false,
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "rm -rf ./build && mkdir build && babel --out-dir ./build --source-maps --copy-files ./src"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "@hapi/joi": "^15.1.0",
+    "@sendgrid/mail": "^6.4.0",
+    "aws-sdk": "^2.526.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "continuation-local-storage": "^3.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "flat": "^4.1.0",
+    "helmet": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.5.15",
+    "mongoose-paginate-v2": "^1.3.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "redis": "^2.8.0",
+    "uuid4": "^1.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "nodemon": "^1.19.1"
+  }
+}
